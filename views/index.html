@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HR Email Tool</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Candidate Email Response Tool</h2>
+    <form id="emailForm">
+      <label>Status:</label><br>
+      <input type="radio" name="status" value="selected" required> Selected
+      <input type="radio" name="status" value="rejected"> Rejected<br><br>
+
+      <label>Candidate Name:</label><br>
+      <input type="text" name="name" required><br><br>
+
+      <label>Candidate Email:</label><br>
+      <input type="email" name="email" required><br><br>
+
+      <label>Position Applied:</label><br>
+      <input type="text" name="position" required><br><br>
+
+      <button type="submit">Send Email</button>
+      <div id="preview"></div>
+    </form>
+    <p id="message"></p>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

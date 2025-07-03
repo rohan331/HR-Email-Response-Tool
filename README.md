@@ -1,90 +1,41 @@
-# Simple HR Email Response Tool
+# HR Email Response Tool
 
-### Task Title
-Build a Simple HR Candidate Email Response Tool
+## Description
+A simple tool to help HR send email responses (selected/rejected) to candidates using predefined templates.
 
-### Task Description
-Create a simple web application that helps HR send email responses to job candidates. The application should allow users to input candidate details, select their status (Selected/Rejected), and send appropriate email responses using predefined templates.
+## Setup Instructions
 
-### Technical Requirements
-- Frontend: HTML, CSS, and JavaScript
-- Backend: Any language of choice (PHP, Python, Node.js, etc.)
-- Simple form handling
-- Email sending functionality
-- No database required (use predefined templates in code)
+1. Clone the repo
+2. Install dependencies:
+   -> npm install (add all the dependencies including node_module reqired for this application)
+3. Update `server.js` with your email and app password.
+4. Start the server:
+  -> node server.js (this will run the server and you can see the changes in the browser)
+  
+note:- if we make any changes in the code then we have to restart the server again, for this 
+      ->Press Ctrl + C in your terminal to stop the server
+      -> Then restart it by running:- node server.js(and see the changes)
 
-### Steps to Complete
+Recommended(optional) :- use "nodemon" for Auto-Restart the server on Saveing the chages    
+  -> npm install nodemon -g
+  -> nodemon server.js
+Now the server automatically restarts every time you save the code.
 
-1. **Create the Form Interface**
-   - Create a simple form with:
-     - Radio buttons for status (Selected/Rejected)
-     - Input field for candidate name
-     - Input field for candidate email
-     - Input field for position applied
-   - Add basic form validation
+5. Open `http://localhost:3000` in your browser.
 
-2. **Set Up Email Templates**
-   - Create two simple email templates in your code:
-     - Selection email template
-     - Rejection email template
-   - Templates should include placeholders for candidate name and position
+## Email configuration Setup
+- Use Gmail or any SMTP service.
+- If using Gmail with 2FA(make sure 2FA must be enable before genetating a password), create an App Password(you will get the 16-character app password):
+- Go to Google Account > Security > App Passwords(or if it still not showing this option try :- https://myaccount.google.com/apppasswords).
+- Use the generated password in `server.js`.
 
-3. **Implement Email Functionality**
-   - Set up email sending functionality using your chosen backend language
-   - Replace template placeholders with form data
-   - Add a preview before sending
-   - Implement the send functionality
+## Features I used
+- Candidate name, email, position input
+- Status (Selected/Rejected)
+- Email preview before sending
+- Mobile-friendly UI
 
-4. **Add Basic Styling**
-   - Make the form look clean and professional
-   - Add success/error messages
-   - Make it mobile-responsive
+## Technologies Used
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js, Express, Nodemailer
 
-### Example Templates
-
-**Selection Template:**
-```
-Dear [Candidate Name],
-
-We are pleased to inform you that you have been selected for the position of [Position].
-
-Please reply to this email to confirm your acceptance.
-
-Best regards,
-HR Team
-```
-
-**Rejection Template:**
-```
-Dear [Candidate Name],
-
-Thank you for applying for the position of [Position].
-
-We regret to inform you that we have decided to move forward with other candidates.
-
-Best regards,
-HR Team
-```
-
-### Notes
-- Keep the code simple and well-organized
-- Focus on making the tool functional rather than fancy
-- Use proper error handling for email sending
-- Test the email functionality thoroughly
-- Comment your code appropriately
-
-### Submission Requirements
-- Source code uploaded to GitHub
-- README file with:
-  - Setup instructions
-  - How to configure email settings
-  - How to run the application
-
-### Time Estimate
-- Estimated completion time: 2-3 hours
-
-### Technical Tips
-- Use a simple email library/function in your chosen language
-- Store email templates as constants/variables
-- Keep styling simple but professional
-- Test with different email providers

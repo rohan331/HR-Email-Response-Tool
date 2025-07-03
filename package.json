@@ -1,0 +1,24 @@
+{
+  "name": "hr-email-response-tool",
+  "version": "1.0.0",
+  "description": "Build a Simple HR Candidate Email Response Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohan331/HR-Email-Response-Tool.git"
+  },
+  "author": "Rohan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohan331/HR-Email-Response-Tool/issues"
+  },
+  "homepage": "https://github.com/rohan331/HR-Email-Response-Tool#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.4"
+  }
+}
