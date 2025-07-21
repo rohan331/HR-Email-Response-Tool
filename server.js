@@ -8,7 +8,9 @@ const PORT = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+//make the file inside the public folder accessible and static
 app.use(express.static('public'));
+// This defines the root route (/) of your server, and tells Express to respond with your frontend page
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views/index.html')));
 
 // Email templates
@@ -48,7 +50,7 @@ app.post('/send-email', async (req, res) => {
       auth: {
         //enter the your email details :- the email from which you want to send the email to the candidate
         user: 'enteryour-email@gmail.com',
-        pass: 'yourGamil-Apppassword'  // Use App Password if only 2FA is on
+        pass: 'yourGamil-Apppassword'  // Use App Password if 2FA is on
       }
     });
 

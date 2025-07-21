@@ -1,6 +1,5 @@
 document.getElementById('emailForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
+  e.preventDefault(); // Prevent the form from submitting normally
   const form = e.target;
   const data = {
     status: form.status.value,
